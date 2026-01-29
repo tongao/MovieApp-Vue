@@ -1,3 +1,10 @@
+macOS 提示“应用已损坏，无法打开”？
+由于 macOS 的安全机制，非 App Store 下载的应用可能会触发此提示。您可以按照以下步骤快速修复：
+
+命令行修复 (推荐): 打开终端，执行以下命令：
+sudo xattr -rd com.apple.quarantine "/Applications/Antigravity Tools.app"
+Homebrew 安装技巧: 如果您使用 brew 安装，可以添加 --no-quarantine 参数来规避此问题：
+brew install --cask --no-quarantine antigravity-tools
 
 基于Vue和Vue-router搭建的电影移动WebApp应用
 ======
